@@ -60,7 +60,7 @@ export default function Footer() {
         },
         { 
           title: 'ABT世界', 
-          link: '/',
+          link: 'http://www.abtworld.cn',
         },
         { 
           title: '币乎 - 1',  
