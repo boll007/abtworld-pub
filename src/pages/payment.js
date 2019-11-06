@@ -107,8 +107,8 @@ export default function PaymentPage() {
   
   if(state.value.payment && state.value.payment.length >= 1) {
     const payment_filter = state.value.payment.filter(function (e) { 
-      if(e.tx.itx.data){
-          temp = e.tx.itx.data.value.replace(/\"/g, "");
+      if(e.tx.itxJson.data){
+          temp = e.tx.itxJson.data.value.replace(/\"/g, "");
           return temp === memo;
       }else{
           return 0;
@@ -118,7 +118,7 @@ export default function PaymentPage() {
     fValuePayed = 0;
     if (payment_data) {
       payment_data.map(function( e ) {
-        fValuePayed = fValuePayed + parseFloat(fromUnitToToken(e.tx.itx.value, token.decimal));
+        fValuePayed = fValuePayed + parseFloat(fromUnitToToken(e.tx.itxJson.value, token.decimal));
       });
     }
     strValuePayed = String(fValuePayed);

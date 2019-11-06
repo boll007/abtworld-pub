@@ -17,14 +17,7 @@ module.exports = {
            listTransactions(addressFilter: {direction: ONE_WAY, sender: "${toAddress(req.user.did)}", receiver: "${wallet.address}"}, typeFilter: {types: "transfer"}, paging: {size: 10000}, timeFilter: {startDateTime: "2019-09-24 00:00:00"}) {
              transactions {
                tx {
-                 itx {
-                   ... on TransferTx {
-                     value
-                     data {
-                       value
-                     }
-                   }
-                 }
+                 itxJson
                }
              }
            }   

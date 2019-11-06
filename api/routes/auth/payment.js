@@ -72,14 +72,7 @@ module.exports = {
                 code
                 info {
                   tx {
-                    itx {
-                      ... on TransferTx {
-                        data {
-                          value
-                        }
-                        value
-                      }
-                    }
+                    itxJson
                   }
                 }
               }
@@ -92,8 +85,8 @@ module.exports = {
           }
           console.log('get back hash', res, 'counter', i);
           if(res && res.getTx && res.getTx.code === 'OK' && res.getTx.info){
-            const tx_memo = res.getTx.info.tx.itx.data.value.replace(/\"/g, "");
-            const tx_value = parseFloat(fromUnitToToken(res.getTx.info.tx.itx.value, state.token.decimal));
+            const tx_memo = res.getTx.info.tx.itxJson.data.value.replace(/\"/g, "");
+            const tx_value = parseFloat(fromUnitToToken(res.getTx.info.tx.itxJson.value, state.token.decimal));
             const pic_asset = AssetPicList.find(x => x.asset_did === tx_memo);
             console.log('payback memo', tx_memo);
 
