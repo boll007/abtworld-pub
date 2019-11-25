@@ -184,17 +184,6 @@ export default function IndexPage() {
           {AssetPicList.map(x => renderPaymentPicListCard(x))}
         </Grid>
       </section>
-      <section className="section">
-         <Typography component="h3" variant="h5" className="section__header" color="textPrimary" gutterBottom>
-           二维码
-         </Typography>
-         <Typography component="p" variant="h6" className="page-description" color="textSecondary">
-           扫描二维码将在链上登录和创建账户，签到代币仅用于钱包和链网测试，禁止交易!
-         </Typography>
-         <Grid container spacing={6} className="section__body demos">
-           {DemoDappList.map(x => renderDemoDappLoginListCard(x))}
-         </Grid>
-       </section>
       </Main>
     </Layout>
   );
