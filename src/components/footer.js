@@ -20,15 +20,27 @@ export default function Footer() {
           title: 'ABT钱包',
           link: 'https://abtwallet.io/',
         },
+		{
+          title: '周报',
+          link: 'https://github.com/ArcBlock/weekly-digest',
+        },
         {
           title: 'Github',
-          link: 'https://github.com/ArcBlock/',
+          link: 'https://github.com/ArcBlock',
+        },
+        {
+          title: 'Github-2',
+          link: 'https://github.com/wangshijun',
         },
       ],
     },
     {
       title: '生态伙伴',
       items: [
+        { 
+          title: '首汽共享汽车', 
+          link: 'https://gfcexplorer.shouqiev.com/' 
+        },
         { 
           title: '引力波互动', 
           link: 'http://www.gravitywavegame.com/' 
@@ -45,26 +57,30 @@ export default function Footer() {
           title: '熵湾科技',
           link: '/',
         },
-        {
-          title: '白鹭科技',
-          link: 'http://egretia.io/',
-        },
       ],
     },
     {
       title: '社区',
       items: [
+        { 
+          title: 'ABT世界', 
+          link: 'http://www.abtworld.cn',
+        },
+        {
+          title: 'FTBC',
+          link: 'http://www.ftbc.cc/',
+        },
+        {
+          title: '3456io区块导航',
+          link: 'http://3456.io/',
+        },
         {
           title: 'ABT共识社区',
           link: 'https://mp.weixin.qq.com/s/j173J-e_MtnquX7sZPDf7w',
         },
         { 
-          title: 'ABT世界', 
-          link: 'http://www.abtworld.cn',
-        },
-        { 
-          title: '币乎 - 1',  
-          link: 'https://bihu.com/people/48746',
+          title: 'Github',  
+          link: 'https://github.com/helloabt',
         },
       ],
     },
@@ -73,18 +89,18 @@ export default function Footer() {
       items: [
         {
           title: '大地云仓',
-          link: 'http://www.dadiyuncang.com/wap/open/app.html#/cloud/invite?id=11826',
+          link: 'http://wap.bb.dadiyuncang.com/pages/users/register?recommend=11826',
         },
       ],
     },
   ];
 
   return (
-    <div style={{ marginTop: '40px', paddingTop: '40px', borderTop: '1px solid #DEDEDE' }}>
+    <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px solid #DEDEDE' }}>
       <Container>
         <Grid container spacing={4}>
           {footers.map(x => (
-            <Grid item xs={12} sm={6} md={3} key={x.title}>
+            <Grid item xs={6} sm={4} md={3} key={x.title}>
               <Typography variant="h6" color="textPrimary" gutterBottom>
                 {x.title}
               </Typography>

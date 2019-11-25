@@ -19,6 +19,7 @@ const paymentAuth = require('../routes/auth/payment');
 const checkinAuth = require('../routes/auth/checkin');
 const sessionRoutes = require('../routes/session');
 const paymentsRoutes = require('../routes/payments');
+const didChatRoutes = require('../routes/chats');
 
 //const isProduction = process.env.NODE_ENV === 'production';
 const isProduction = 0;
@@ -48,7 +49,7 @@ mongoose.connection.on('reconnected', () => {
 // Create and config express application
 const server = express();
 server.use(cookieParser());
-server.use(bodyParser.json());
+server.use(bodyParser.json({limit: '1mb'}));
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(cors());
 
@@ -98,6 +99,7 @@ handlers.attach(Object.assign({ app: router }, checkinAuth));
 handlers.attach(Object.assign({ app: router }, paymentAuth));
 sessionRoutes.init(router);
 paymentsRoutes.init(router);
+didChatRoutes.init(router);
 
 // Check for application account
 ForgeSDK.getAccountState({ address: wallet.address })

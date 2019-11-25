@@ -45,20 +45,10 @@ export default function Header() {
     <Nav>
       <div className="nav-left">
         <Typography href="/" component="a" variant="h6" color="inherit" noWrap className="brand">
-          <img className="logo" src="/static/images/logo.png" alt="world" />
           首页
         </Typography>
-        <Typography
-          component="a"
-          href={env.chainHost.replace('/api', '/node/explorer/txs')}
-          target="_blank"
-          variant="h6"
-          color="inherit"
-          className="text">
-          浏览器
-        </Typography>
-        <Typography href="/about" component="a" variant="h6" color="inherit" className="text">
-          关于
+        <Typography href="/didchat" component="a" variant="h6" color="inherit" className="text">
+          DID Chat
         </Typography>
       </div>
       <div className="nav-right">
