@@ -28,8 +28,8 @@ module.exports = {
       };
 
       return {
-        txType: 'TransferTx',
-        txData: {
+        type: 'TransferTx',
+        data: {
           itx: {
             to: wallet.address,
             value: fromTokenToUnit(strValueToPay, state.token.decimal),
